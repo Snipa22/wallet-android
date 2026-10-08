@@ -99,4 +99,6 @@ target_link_libraries(
         wallet
         ${log-lib}
         "-Wl,--allow-multiple-definition"
+        "-Wl,-z,max-page-size=16384"
+        "-Wl,-z,common-page-size=16384"
 )
