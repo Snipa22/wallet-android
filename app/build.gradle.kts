@@ -31,6 +31,7 @@ val currentDate: String = SimpleDateFormat("ddMMMyy", Locale.getDefault()).forma
 
 android {
     namespace = "com.tari.android.wallet"
+    ndkVersion = "30.0.16248370"
 
     defaultConfig {
         applicationId = "com.tari.android.wallet"
@@ -145,7 +146,7 @@ android {
     packaging {
         resources.excludes += "DebugProbesKt.bin"
         jniLibs {
-            useLegacyPackaging = true
+            useLegacyPackaging = false
         }
         resources {
             excludes += listOf(
